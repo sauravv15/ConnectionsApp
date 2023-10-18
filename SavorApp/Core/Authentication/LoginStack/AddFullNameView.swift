@@ -1,13 +1,13 @@
 //
-//  AddEmailView.swift
-//  UniSync
+//  AddFullNameView.swift
+//  Savor
 //
-//  Created by Saurav Vidyadhara on 8/11/23.
+//  Created by Saurav Vidyadhara on 10/18/23.
 //
 
 import SwiftUI
 
-struct AddEmailView: View {
+struct AddFullNameView: View {
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var viewModel: RegistrationViewModel
     
@@ -19,12 +19,12 @@ struct AddEmailView: View {
         ZStack {
             Color.black
             VStack(spacing:20) {
-                Text("What's Your Email?")
+                Text("What's Your Name?")
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .padding(.top)
-                TextField("Email", text: $viewModel.email, prompt: Text("Email").foregroundColor(.gray).bold())
+                TextField("Full Name", text: $viewModel.fullname, prompt: Text("Full Name").foregroundColor(.gray).bold())
                     .foregroundColor(.white)
                     .textFieldStyle(.plain)
                     .autocapitalization(.none)
@@ -32,7 +32,7 @@ struct AddEmailView: View {
                     .frame(width:.infinity, height:1)
                     .foregroundColor(.white)
                 NavigationLink {
-                    AddUsernameView()
+                    AddEmailView()
                 } label: {
                     Text("Continue")
                         .bold()
@@ -56,8 +56,8 @@ struct AddEmailView: View {
     }
 }
 
-struct AddEmailView_Previews: PreviewProvider {
+struct AddFullNameView_Previews: PreviewProvider {
     static var previews: some View {
-        AddEmailView()
+        AddFullNameView()
     }
 }

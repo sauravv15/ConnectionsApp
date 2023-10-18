@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct MainTabView: View {
+    let user: User
+    @StateObject var serviceDataManager = ServiceDataManager()
+    
     var body: some View {
         TabView {
             ServiceView()
+                .environmentObject(serviceDataManager)
                 .tabItem {
                     Image(systemName: "house")
                 }
@@ -18,7 +22,7 @@ struct MainTabView: View {
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                 }
-            CurrentUserProfileView()
+            CurrentUserProfileView(user: user)
                 .tabItem {
                     Image(systemName: "person")
                 }
@@ -30,6 +34,6 @@ struct MainTabView: View {
 
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainTabView()
+        MainTabView(user: User.MOCK_USERS[0])
     }
 }

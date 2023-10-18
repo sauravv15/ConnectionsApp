@@ -14,7 +14,7 @@ struct CompleteSignUpView: View {
         ZStack {
             Color.black
             VStack(spacing:20) {
-                Text("Welcome To UniSync")
+                Text("Welcome To Savör, \(viewModel.fullname)!")
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
@@ -46,3 +46,4 @@ struct CompleteSignUpView_Previews: PreviewProvider {
         CompleteSignUpView()
     }
 }
+

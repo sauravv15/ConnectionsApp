@@ -9,13 +9,14 @@ import SwiftUI
 import Firebase
 
 struct CreateServiceView: View {
+    @EnvironmentObject var serviceDataManager : ServiceDataManager
     
     @State var serviceName: String = ""
     @State var serviceLocation: String = ""
-    @State var servicePrice: String = ""
+    @State var serviceRate: Double = 0.0
     @State var serviceDesc: String = ""
     var isCreateButtonDisabled: Bool {
-            [serviceName, serviceLocation, servicePrice, serviceDesc].contains(where: \.isEmpty)
+            [serviceName, serviceLocation, serviceDesc].contains(where: \.isEmpty)
         }
     @State private var bgColor =
             Color(.sRGB, red: 0.98, green: 0.9, blue: 0.2)
@@ -24,7 +25,7 @@ struct CreateServiceView: View {
 
     var body: some View {
         ZStack {
-            Color("MainColor")
+            Color.black
             VStack {
                 ZStack {
                     Text("CREATE YOUR SERVICE")
@@ -66,7 +67,7 @@ struct CreateServiceView: View {
                                 .foregroundColor(.white)
                                 .fontWeight(.heavy)
                                 .offset(x:-5)
-                            TextField("", text: $servicePrice)
+                            TextField("", value: $serviceRate, format: .number)
                                 .foregroundColor(.white)
                                 .frame(width: 340)
                             Rectangle()
@@ -89,7 +90,7 @@ struct CreateServiceView: View {
                         .padding(.bottom)
                         VStack {
                             Text("Design your service card")
-                                .foregroundColor(.black)
+                                .foregroundColor(.white)
                                 .fontWeight(.heavy)
                                 .offset(x:-65)
                             LazyVStack {
@@ -102,7 +103,7 @@ struct CreateServiceView: View {
                                 .padding(10)
                                 HStack{
                                     Text(serviceLocation)
-                                    Text(servicePrice + "")
+                                    Text(String(serviceRate) + "/hr")
                                 }
                                 .padding(10)
                                 Text(serviceDesc)
@@ -115,7 +116,7 @@ struct CreateServiceView: View {
                             .padding(40)
                             HStack {
                                 Text("Pick a color:")
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                                     .fontWeight(.heavy)
                                     .offset(x:40)
                                 ColorPicker("", selection: $bgColor)
@@ -125,7 +126,10 @@ struct CreateServiceView: View {
                         .padding(.bottom)
                         HStack {
                             Button {
-                                //create service
+                                let randomInt = Int.random(in: 1..<1000)
+                                let newService = Service(id: String(randomInt), name: serviceName, location: serviceLocation, rate: serviceRate, desc: serviceDesc)
+                                serviceDataManager.addService(service: newService)
+                                
                             } label: {
                                 Text("Create My Service")
                                     .bold()
@@ -204,5 +208,7 @@ extension Color {
 struct CreateServiceView_Previews: PreviewProvider {
     static var previews: some View {
         CreateServiceView()
+            .environmentObject(ServiceDataManager())
     }
 }
+

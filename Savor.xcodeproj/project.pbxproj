@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5056E16A2AE0639F00E0ED2B /* AddFullNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E1692AE0639E00E0ED2B /* AddFullNameView.swift */; };
+		5056E16B2AE0639F00E0ED2B /* AddFullNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E1692AE0639E00E0ED2B /* AddFullNameView.swift */; };
+		5056E16C2AE0639F00E0ED2B /* AddFullNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E1692AE0639E00E0ED2B /* AddFullNameView.swift */; };
+		5056E16E2AE063E300E0ED2B /* AddUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E16D2AE063E300E0ED2B /* AddUsernameView.swift */; };
+		5056E16F2AE063E300E0ED2B /* AddUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E16D2AE063E300E0ED2B /* AddUsernameView.swift */; };
+		5056E1702AE063E300E0ED2B /* AddUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E16D2AE063E300E0ED2B /* AddUsernameView.swift */; };
+		5056E1732AE064DF00E0ED2B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E1722AE064DF00E0ED2B /* Service.swift */; };
+		5056E1742AE064DF00E0ED2B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E1722AE064DF00E0ED2B /* Service.swift */; };
+		5056E1752AE064DF00E0ED2B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E1722AE064DF00E0ED2B /* Service.swift */; };
+		5056E1772AE064FA00E0ED2B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E1762AE064FA00E0ED2B /* User.swift */; };
+		5056E1782AE064FA00E0ED2B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E1762AE064FA00E0ED2B /* User.swift */; };
+		5056E1792AE064FA00E0ED2B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E1762AE064FA00E0ED2B /* User.swift */; };
+		5056E17B2AE0655500E0ED2B /* ServiceDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E17A2AE0655500E0ED2B /* ServiceDataManager.swift */; };
+		5056E17C2AE0655500E0ED2B /* ServiceDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E17A2AE0655500E0ED2B /* ServiceDataManager.swift */; };
+		5056E17D2AE0655500E0ED2B /* ServiceDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5056E17A2AE0655500E0ED2B /* ServiceDataManager.swift */; };
 		505EA0452A85AA5C000206C4 /* SavorAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505EA0442A85AA5C000206C4 /* SavorAppApp.swift */; };
 		505EA0472A85AA5C000206C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505EA0462A85AA5C000206C4 /* ContentView.swift */; };
 		505EA0492A85AA5F000206C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 505EA0482A85AA5F000206C4 /* Assets.xcassets */; };
@@ -79,6 +94,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5056E1692AE0639E00E0ED2B /* AddFullNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFullNameView.swift; sourceTree = "<group>"; };
+		5056E16D2AE063E300E0ED2B /* AddUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUsernameView.swift; sourceTree = "<group>"; };
+		5056E1722AE064DF00E0ED2B /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		5056E1762AE064FA00E0ED2B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5056E17A2AE0655500E0ED2B /* ServiceDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDataManager.swift; sourceTree = "<group>"; };
 		505EA0412A85AA5C000206C4 /* Savor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Savor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		505EA0442A85AA5C000206C4 /* SavorAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavorAppApp.swift; sourceTree = "<group>"; };
 		505EA0462A85AA5C000206C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +153,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5056E1712AE064B000E0ED2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5056E1722AE064DF00E0ED2B /* Service.swift */,
+				5056E1762AE064FA00E0ED2B /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		505EA0382A85AA5C000206C4 = {
 			isa = PBXGroup;
 			children = (
@@ -207,13 +236,6 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
-		505EA0712A85AAD2000206C4 /* SplashPage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SplashPage;
-			sourceTree = "<group>";
-		};
 		505EA0722A85AAD5000206C4 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,13 +248,13 @@
 		505EA0732A85AAD6000206C4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5056E1712AE064B000E0ED2B /* Model */,
 				50CBA5E32A8D9D7500E596DE /* CreateEvent */,
 				50CBA5DE2A8D9D4400E596DE /* Search */,
 				50CBA5D92A8D9CEE00E596DE /* MainPage */,
 				505EA0752A85AC7C000206C4 /* TabBar */,
 				505EA0742A85AB91000206C4 /* Profile */,
 				505EA06F2A85AABC000206C4 /* Root */,
-				505EA0712A85AAD2000206C4 /* SplashPage */,
 				505EA0722A85AAD5000206C4 /* Authentication */,
 			);
 			path = Core;
@@ -261,6 +283,8 @@
 				505EA0822A85E43B000206C4 /* AddEmailView.swift */,
 				50CBA5C12A8D9B0600E596DE /* AddPasswordView.swift */,
 				50CBA5C52A8D9B2100E596DE /* CompleteSignUpView.swift */,
+				5056E1692AE0639E00E0ED2B /* AddFullNameView.swift */,
+				5056E16D2AE063E300E0ED2B /* AddUsernameView.swift */,
 			);
 			path = LoginStack;
 			sourceTree = "<group>";
@@ -295,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				50CBA5E42A8D9D9200E596DE /* CreateServiceView.swift */,
+				5056E17A2AE0655500E0ED2B /* ServiceDataManager.swift */,
 			);
 			path = CreateEvent;
 			sourceTree = "<group>";
@@ -461,16 +486,21 @@
 				50CBA5D22A8D9B8A00E596DE /* LoginViewModel.swift in Sources */,
 				50CBA5C62A8D9B2100E596DE /* CompleteSignUpView.swift in Sources */,
 				50CBA5DB2A8D9D1000E596DE /* ServiceView.swift in Sources */,
+				5056E1732AE064DF00E0ED2B /* Service.swift in Sources */,
 				50CBA5CA2A8D9B5900E596DE /* AuthService.swift in Sources */,
 				50CBA5E52A8D9D9200E596DE /* CreateServiceView.swift in Sources */,
 				505EA0472A85AA5C000206C4 /* ContentView.swift in Sources */,
+				5056E16A2AE0639F00E0ED2B /* AddFullNameView.swift in Sources */,
 				50CBA5CE2A8D9B6E00E596DE /* RegistrationViewModel.swift in Sources */,
 				50CBA5E02A8D9D5600E596DE /* SearchView.swift in Sources */,
 				505EA0452A85AA5C000206C4 /* SavorAppApp.swift in Sources */,
 				505EA0832A85E43B000206C4 /* AddEmailView.swift in Sources */,
 				505EA07F2A85DD07000206C4 /* LoginView.swift in Sources */,
+				5056E16E2AE063E300E0ED2B /* AddUsernameView.swift in Sources */,
 				505EA0772A85ACED000206C4 /* MainTabView.swift in Sources */,
+				5056E17B2AE0655500E0ED2B /* ServiceDataManager.swift in Sources */,
 				50CBA5EB2A8D9DC200E596DE /* ContentViewModel.swift in Sources */,
+				5056E1772AE064FA00E0ED2B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,14 +511,19 @@
 				505EA0842A85E43B000206C4 /* AddEmailView.swift in Sources */,
 				50CBA5DC2A8D9D1000E596DE /* ServiceView.swift in Sources */,
 				50CBA5CF2A8D9B6E00E596DE /* RegistrationViewModel.swift in Sources */,
+				5056E17C2AE0655500E0ED2B /* ServiceDataManager.swift in Sources */,
 				50CBA5C72A8D9B2100E596DE /* CompleteSignUpView.swift in Sources */,
+				5056E16F2AE063E300E0ED2B /* AddUsernameView.swift in Sources */,
 				50CBA5E12A8D9D5600E596DE /* SearchView.swift in Sources */,
 				505EA0562A85AA5F000206C4 /* SavorAppTests.swift in Sources */,
+				5056E16B2AE0639F00E0ED2B /* AddFullNameView.swift in Sources */,
 				505EA07C2A85AED4000206C4 /* CurrentUserProfileView.swift in Sources */,
 				505EA0802A85DD07000206C4 /* LoginView.swift in Sources */,
 				505EA0782A85ACED000206C4 /* MainTabView.swift in Sources */,
+				5056E1742AE064DF00E0ED2B /* Service.swift in Sources */,
 				50CBA5C32A8D9B0600E596DE /* AddPasswordView.swift in Sources */,
 				50CBA5EC2A8D9DC200E596DE /* ContentViewModel.swift in Sources */,
+				5056E1782AE064FA00E0ED2B /* User.swift in Sources */,
 				50CBA5D32A8D9B8A00E596DE /* LoginViewModel.swift in Sources */,
 				50CBA5CB2A8D9B5900E596DE /* AuthService.swift in Sources */,
 				50CBA5E62A8D9D9200E596DE /* CreateServiceView.swift in Sources */,
@@ -504,16 +539,21 @@
 				50CBA5D42A8D9B8A00E596DE /* LoginViewModel.swift in Sources */,
 				50CBA5C82A8D9B2100E596DE /* CompleteSignUpView.swift in Sources */,
 				50CBA5DD2A8D9D1000E596DE /* ServiceView.swift in Sources */,
+				5056E1752AE064DF00E0ED2B /* Service.swift in Sources */,
 				50CBA5CC2A8D9B5900E596DE /* AuthService.swift in Sources */,
 				50CBA5E72A8D9D9200E596DE /* CreateServiceView.swift in Sources */,
 				505EA0622A85AA5F000206C4 /* SavorAppUITestsLaunchTests.swift in Sources */,
+				5056E16C2AE0639F00E0ED2B /* AddFullNameView.swift in Sources */,
 				50CBA5D02A8D9B6E00E596DE /* RegistrationViewModel.swift in Sources */,
 				50CBA5E22A8D9D5600E596DE /* SearchView.swift in Sources */,
 				505EA0602A85AA5F000206C4 /* SavorAppUITests.swift in Sources */,
 				505EA0852A85E43B000206C4 /* AddEmailView.swift in Sources */,
 				505EA0812A85DD07000206C4 /* LoginView.swift in Sources */,
+				5056E1702AE063E300E0ED2B /* AddUsernameView.swift in Sources */,
 				505EA0792A85ACED000206C4 /* MainTabView.swift in Sources */,
+				5056E17D2AE0655500E0ED2B /* ServiceDataManager.swift in Sources */,
 				50CBA5ED2A8D9DC200E596DE /* ContentViewModel.swift in Sources */,
+				5056E1792AE064FA00E0ED2B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

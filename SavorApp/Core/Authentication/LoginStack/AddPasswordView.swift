@@ -19,7 +19,7 @@ struct AddPasswordView: View {
         ZStack {
             Color.black
             VStack(spacing:20) {
-                Text("What's Your Password?")
+                Text("Create A Password")
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.white)

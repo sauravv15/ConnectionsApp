@@ -17,26 +17,22 @@ struct LoginView: View {
     var body: some View {
         NavigationStack {
             ZStack{
-                Color("MainColor")
+                Color.black
                 VStack(spacing: 20) {
-                    Image("savor_logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 220, height:100)
-                    TextField("Email", text: $viewModel.email, prompt: Text("Email").foregroundColor(.gray).bold())
-                        .foregroundColor(.black)
+                    TextField("Email", text: $viewModel.email, prompt: Text("Email").foregroundColor(.white).bold())
+                        .foregroundColor(.white)
                         .textFieldStyle(.plain)
                         .autocapitalization(.none)
                     Rectangle()
-                        .frame(width: 350, height:1)
-                        .foregroundColor(.black)
-                    SecureField("Password", text: $viewModel.password, prompt: Text("Password").foregroundColor(.gray).bold())
-                        .foregroundColor(.black)
+                        .frame(width:.infinity, height:1)
+                        .foregroundColor(.white)
+                    SecureField("Password", text: $viewModel.password, prompt: Text("Password").foregroundColor(.white).bold())
+                        .foregroundColor(.white)
                         .textFieldStyle(.plain)
                         .autocapitalization(.none)
                     Rectangle()
-                        .frame(width: 350, height:1)
-                        .foregroundColor(.black)
+                        .frame(width:.infinity, height:1)
+                        .foregroundColor(.white)
                     Button {
                         Task{ try await viewModel.signIn()}
                     } label: {
@@ -47,7 +43,7 @@ struct LoginView: View {
                             .background(
                                 isSignInButtonDisabled ?
                                 LinearGradient(colors: [.gray], startPoint: .topLeading, endPoint: .bottomTrailing) :
-                                    LinearGradient(colors: [.accentColor], startPoint: .topLeading, endPoint: .bottomTrailing)
+                                    LinearGradient(colors: [.teal, .blue], startPoint: .topLeading, endPoint: .bottomTrailing)
                             )
                             .cornerRadius(20)
                             .disabled(isSignInButtonDisabled)
@@ -56,7 +52,7 @@ struct LoginView: View {
                     }
                     .padding(.top)
                     .offset(y: 100)
-                    NavigationLink(destination: AddEmailView())
+                    NavigationLink(destination: AddFullNameView())
                         {
                         Text("Don't have an account? Sign Up")
                             .foregroundColor(Color.blue)
